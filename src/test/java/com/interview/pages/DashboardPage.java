@@ -12,6 +12,11 @@ public class DashboardPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="header")
-    public WebElement header;
+    @FindBy(xpath = "(//span[.='Contact Us']/..)[2]")
+    public WebElement contactButton;
+
+
 }
+
+
+

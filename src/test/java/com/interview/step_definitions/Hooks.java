@@ -1,7 +1,6 @@
 package com.interview.step_definitions;
 
 import com.interview.utilities.BrowserUtils;
-import com.interview.utilities.ConfigurationReader;
 import com.interview.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,8 +21,9 @@ public class Hooks {
     public void setupMethod(){
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        Driver.getDriver().manage().window().maximize();
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("web.url"));
+
     }
 
     //@Before (value = "@login", order = 2 )

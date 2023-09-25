@@ -27,16 +27,6 @@ import java.util.List;
         @FindBy(css = "h1[class='oro-subtitle']")
         public WebElement pageSubTitle;
 
-        @FindBy(css = "#user-menu > a")
-        public WebElement userName;
-
-        @FindBy(linkText = "Logout")
-        public WebElement logOutLink;
-
-        @FindBy(linkText = "My User")
-        public WebElement myUser;
-
-
 
 
         /**
@@ -48,6 +38,8 @@ import java.util.List;
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
             return pageSubTitle.getText();
         }
+
+
 
 
         /**
